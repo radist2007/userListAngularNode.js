@@ -1,0 +1,14 @@
+<div class="list">
+  <div *ngFor="let user of users">
+    {{ user.first_name }} - {{ user.last_name }} - {{ user.email }}
+    <button (click)="user.editable = !user.editable">edit</button>
+    <button (click)="destroy(user)">Delete</button>
+    <app-user-edit 
+    [user]="user" 
+    (updateUserEvent)="update($event)" 
+    *ngIf="user.editable"
+    
+    ></app-user-edit>
+  </div>
+
+</div>

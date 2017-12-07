@@ -1,0 +1,9 @@
+<div class="list">
+  <h3>userListComponent</h3>
+  <form (submit)="create()">
+    <input type="text" name="first" [(ngModel)]="newUser.first_name">
+    <input type="text" name="last" [(ngModel)]="newUser.last_name">
+    <input type="text" name="email" [(ngModel)]="newUser.email">
+    <input type="submit">
+  </form>
+</div>
